@@ -1,0 +1,9 @@
+.form,
+.greetings {
+    display: none;
+    text-transform: capitalize;
+}
+
+.show{
+    display: block;
+}
