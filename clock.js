@@ -7,8 +7,9 @@ function getTime() {
     const hours = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
+    const zone = date.toLocaleTimeString('en-us',{timeZoneName:'short'}).split(' ')[2];
 
-    clockTitle.innerText = `${hours} : ${minutes < 10 ? `0${minutes}` : minutes} : ${seconds < 10 ? `0${seconds}` : seconds} `;
+    clockTitle.innerText = `${hours} : ${minutes < 10 ? `0${minutes}` : minutes} : ${seconds < 10 ? `0${seconds}` : seconds} ${zone}`;
 
 }
 
