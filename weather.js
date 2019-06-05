@@ -1,6 +1,5 @@
 const COORDS = 'coords';
 
-
 function saveCoords(obj) {
     localStorage.setItem(COORDS, JSON.stringify(obj))
 }
@@ -13,7 +12,7 @@ function handleSuccess(position) {
             long
         }
 
-    console.log("position:",position, "lat:", lat, "long:", long);
+    console.log("position:", position, "lat:", lat, "long:", long);
     saveCoords(coords);
 }
 
@@ -22,7 +21,7 @@ function handleError() {
 }
 
 function getCoords() {
-   navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
+    navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
 }
 
 function getLocation() {
@@ -35,6 +34,7 @@ function getLocation() {
 }
 
 function init() {
-   getCoords();}
+    getCoords();
+}
 
 init();
