@@ -7,13 +7,13 @@ function saveCoords(obj) {
 
 function handleSuccess(position) {
     const lat = position.coords.latitude,
-        long = position.coords.longitute,
+        long = position.coords.longitude,
         coords = {
             lat,
             long
         }
 
-    console.log(position);
+    console.log("position:",position, "lat:", lat, "long:", long);
     saveCoords(coords);
 }
 
@@ -22,7 +22,7 @@ function handleError() {
 }
 
 function getCoords() {
-   return navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
+   navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
 }
 
 function getLocation() {
@@ -35,7 +35,6 @@ function getLocation() {
 }
 
 function init() {
-   getCoords();
-}
+   getCoords();}
 
 init();
