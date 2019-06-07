@@ -6,27 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dMoment</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="js-weather">
+            <div class="temp"></div>
+            <div class="location"></div>
+    </div>
     
-
+<div class="main">
     <div class="js-clock">
         <h1 class="clock-title">time</h1>
-    </div>
+    </div>  
 
     <form class="js-form form">
         <input type="text" placeholder="What is your name?" />
-    </form>
-    
-    <h4 class="js-greetings greetings"></h4>
-
+    </form>    
+    <h2 class="js-greetings greetings"></h4>
     <form class="js-todoForm">
         <input type="text" placeholder="What is your plan for today?" />
     </form>
 
     <ul class="js-todoList"></ul>
-
+    
+</div>
+    <!-- script -->
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
