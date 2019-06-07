@@ -1,13 +1,59 @@
 body {
-    color: white;
+  color: white;
   background-color: darkgray;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Weather */
+.js-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: 900;
+}
+
+.temp {
+  font-size: 90px;
+  align-content: flex-end;
+}
+
+.location {
+  font-size: 20px;
+  align-content: flex-end;
+  right: 0px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20% 25% 0% 25%;
+  padding: 10px;
+  position: relative;
+}
+
+/* Clock */
+
+.clock-title   {
+    margin: 0 0;
+    font-size: 120px;
 }
 
 .form,
 .greetings {
   display: none;
-  text-transform: capitalize;
+  margin: 0 0;
 }
+
+/* .js-clock{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+} */
 
 .show {
   display: block;
