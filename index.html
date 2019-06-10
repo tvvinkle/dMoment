@@ -12,33 +12,48 @@
 
 <body>
     <div class="js-weather">
-            <div class="temp"></div>
-            <div class="location"></div>
+        <div class="temp"></div>
+        <div class="location"></div>
     </div>
-    
-<div class="main">
-    <div class="js-clock">
-        <h1 class="clock-title">time</h1>
-    </div>  
 
-    <form class="js-form form">
-        <input type="text" placeholder="What is your name?" />
-    </form>    
-    <h2 class="js-greetings greetings"></h4>
-    <form class="js-todoForm">
-        <input type="text" placeholder="What is your plan for today?" />
-    </form>
+    <div class="main">
+        <div class="js-clock">
+            <h1 class="clock-title">time</h1>
+        </div>
 
-    <ul class="js-todoList"></ul>
-    
-</div>
+        <div class="js-form">
+            <form class="js-form form">
+                <input type="text" placeholder="What is your name?" />
+            </form>
+            <h2 class="js-greetings greetings"></h2>
+        </div>
+
+        <div class="js-form">
+            <form class="js-todoForm ">
+                <input type="text" class="effect-16">
+                <label>Today's Focus</label>
+                <span class="focus-border"></span></input>
+
+            </form>
+        </div>
+
+        <div class="items">
+            <ul class="js-todoList">
+                <li class="js-todoListItem"></li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
     <!-- script -->
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
     <script src="bg.js"></script>
     <script src="weather.js"></script>
-  
+
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 const todoForm = document.querySelector(".js-todoForm"),
     todoInput = todoForm.querySelector("input"),
-    todoList = document.querySelector(".js-todoList");
+    todoList = document.querySelector(".js-todoList"),
+    todoItem = document.querySelector(".js-todoListItem");
 
 const TODOS_LS = "todos";
 let todos = [];
@@ -10,7 +11,7 @@ function deleteTodo(event) {
     const btn = event.target;
     const li = btn.parentNode;
 
-    todoList.removeChild(li);
+    todoItem.removeChild(li);
 
     const deletetodosLS = todos.filter(function(td) {
         return td.id !== parseInt(li.id);
@@ -26,19 +27,19 @@ function saveTodos() {
 }
 
 function setTodo(txt) {
-
     const list = document.createElement("li");
     const btn = document.createElement("button");
     btn.addEventListener("click", deleteTodo);
     const span = document.createElement("span");
     const id = todos.length + 1;
     span.innerText = txt;
-
-    list.appendChild(span);
-    list.appendChild(btn);
+    list.append(span);
+    list.append(btn);
+    // list.appendChild(span);
+    // list.appendChild(btn);
     list.id = id;
 
-    todoList.appendChild(list);
+    todoItem.appendChild(list);
 
     const todoObj = {
         id: id,
